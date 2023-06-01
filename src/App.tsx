@@ -1,9 +1,16 @@
-import Todos from './components/Todos';
+import Todos from "./components/Todos";
+import Todo from "./models/todo";
 
 function App() {
+  const todos = [
+    new Todo("리액트 배우기"),
+    new Todo("타입스크립트 배우기"),
+    new Todo("딥다이브 공부"),
+    new Todo("메인 프로젝트 기획"),
+  ];
   return (
     <div>
-      <Todos items={['리액트 배우기', '타입스크립트 배우기', '딥다이브 공부','메인 프로젝트 기획']} />
+      <Todos items={todos} />
     </div>
   );
 }
